@@ -1,7 +1,8 @@
-function App(props) {
+export default function App(props) {
     return (
-        <div className="todoapp stack-large">
-            <h1>TodoMatic</h1>
+        <div className="todoapp stac
+        k-large">
+            <h1>To Do App</h1>
             <form>
                 <h2 className="label-wrapper">
                     <label htmlFor="new-todo-input" className="label__lg">
