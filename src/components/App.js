@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from '../components/Form';
 import ToDoListData from '../data';
 import Items from '../components/Item';
+import {Heading, Wrapper} from '../styles/styles';
 
 export default function App(props) {
     // useState to display the items in a ul
@@ -10,20 +11,17 @@ export default function App(props) {
     const [input, updateInput] = useState([]);
 
     return (
-        <div className="app-wrapper">
-            <header>
+        <Wrapper>
+            <Heading>
                 <h1>Rosa's To Do App</h1>
-            </header>
-            {/*<h2>*/}
-            {/*    We have */}
-            {/*</h2>*/}
+            </Heading>
             <Form
                 setTodo={setTodo}
                 todo={todo}
                 updateInput={updateInput}
                 input={input}
             />
-            <Items todo={todo} setTodo={setTodo} />
-        </div>
+            <Items todo={todo} setTodo={setTodo}/>
+        </Wrapper>
     );
 }
